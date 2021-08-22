@@ -1,0 +1,19 @@
+# See https://buf.build/
+version: v1
+managed:
+  enabled: true
+  cc_enable_arenas: false
+  java_multiple_files: true
+
+plugins:
+  - name: grpc-web
+    out: build/grpc-web
+    opt:
+      - mode=grpcwebtext
+      - import_style=typescript
+  - name: ts_proto
+    out: build/grpc-ts
+    opt:
+      - oneof=unions
+      - esModuleInterop=true
+      - forceLong=long
