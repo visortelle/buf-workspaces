@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package b.v1;
 
+import "buf.build/x/a/a/v1/a.proto";
+
 message BBB {
   string bbb = 1;
 }
